@@ -3,7 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdButtonModule, MdCheckboxModule, MdToolbarModule, MdListModule, MdLineModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdToolbarModule, MdListModule, MdLineModule, MdGridListModule,
+  MdCardModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -23,7 +24,9 @@ import { MenuComponent } from './menu/menu.component';
     MdButtonModule,
     MdListModule,
     MdCheckboxModule,
+    MdGridListModule,
     MdLineModule,
+    MdCardModule,
     MdToolbarModule,
     FlexLayoutModule
   ],
