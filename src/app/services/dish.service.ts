@@ -7,7 +7,7 @@ export class DishService {
 
   constructor() { }
 
-  getDishes(): Dish[] {
+  static getDishes(): Dish[] {
     return DISHES;
   }
 }
