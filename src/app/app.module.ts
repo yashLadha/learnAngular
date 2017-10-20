@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MdButtonModule, MdCheckboxModule, MdToolbarModule, MdListModule, MdLineModule, MdGridListModule,
-  MdCardModule, MdDialogModule, MdInputModule } from '@angular/material';
+  MdCardModule, MdDialogModule, MdInputModule, MdSlideToggleModule, MdOptionModule, MdSelectModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -43,6 +44,10 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     HttpModule,
     MdButtonModule,
     MdInputModule,
+    MdSelectModule,
+    MdOptionModule,
+    ReactiveFormsModule,
+    MdSlideToggleModule,
     MdListModule,
     MdCheckboxModule,
     MdGridListModule,
