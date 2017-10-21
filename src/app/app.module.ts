@@ -5,7 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MdButtonModule, MdCheckboxModule, MdToolbarModule, MdListModule, MdLineModule, MdGridListModule,
-  MdCardModule, MdDialogModule, MdInputModule, MdSlideToggleModule, MdOptionModule, MdSelectModule } from '@angular/material';
+  MdCardModule, MdDialogModule, MdInputModule, MdSlideToggleModule, MdOptionModule, MdSelectModule,
+  MdProgressSpinnerModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -48,6 +49,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     MdOptionModule,
     ReactiveFormsModule,
     MdSlideToggleModule,
+    MdProgressSpinnerModule,
     MdListModule,
     MdCheckboxModule,
     MdGridListModule,
