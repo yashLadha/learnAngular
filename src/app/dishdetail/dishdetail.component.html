@@ -19,10 +19,10 @@
         <button md-button>LIKE</button>
         <button md-button>SHARE</button>
         <span class="flex-spacer">
-            <button md-button [routerLink]="['/dishdetail', next]">
-              <span class="fa fa-chevron-right fa-lg"></span>
-            </button>
-        </span> 
+          <button md-button [routerLink]="['/dishdetail', next]">
+            <span class="fa fa-chevron-right fa-lg"></span>
+          </button>
+        </span>
       </md-card-actions>
     </md-card>
   </div>
@@ -35,7 +35,37 @@
         <p md-line>{{ comment.rating }}</p>
         <p md-line>-- {{ comment.author }} {{ comment.date | date}}</p>
       </md-list-item>
+
+      <md-list-item *ngIf="commentForm.valid">
+        <p md-line>{{ commentForm.value.comment }}</p>
+        <p md-line>{{ commentForm.value.rating }}</p>
+        <p md-line>-- {{ commentForm.value.name }}</p>
+      </md-list-item>
     </md-list>
+
+    <form novalidate [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+      <p>
+        <md-input-container class="full-width" dividerColor="{{(formErrors.name) ? 'warn' : 'primary'}}">
+          <input mdInput formControlName="name" placeholder="Name" type="text" required>
+          <md-hint>
+            <span [hidden]="!(formErrors.name)">{{ formErrors.name }}</span>
+          </md-hint>
+        </md-input-container>
+      </p>
+      <p>
+        <md-slider thumbLabel formControlName="rating" tickInterval="1" min="1" max="5" step="1" value="5"></md-slider>
+      </p>
+      <p>
+        <md-input-container class="full-width" dividerColor="{{(formErrors.comment) ? 'warn' : 'primary'}}">
+          <textarea mdInput formControlName="comment" placeholder="Your Feedback" rows=12 type="text" required></textarea>
+          <md-hint>
+            <span [hidden]="!(formErrors.comment)">{{ formErrors.comment }}</span>
+          </md-hint>
+        </md-input-container>
+      </p>
+      <button type="submit" md-button class="background-primary text-floral-white" [disabled]="commentForm.invalid">Submit</button>
+    </form>
+
   </div>
 
   <div [hidden]="dish">
