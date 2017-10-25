@@ -25,9 +25,9 @@
         </address>
         <p></p>
         <div>
-          <a md-raised-button href="tel:+85212345678"><i class="fa fa-phone"></i> Call</a>
-          <a md-raised-button><i class="fa fa-skype"></i> Skype</a>
-          <a md-raised-button href="mailto:confusion@food.net"><i class="fa fa-envelope-o"></i> Email</a>
+          <a mat-raised-button href="tel:+85212345678"><i class="fa fa-phone"></i> Call</a>
+          <a mat-raised-button><i class="fa fa-skype"></i> Skype</a>
+          <a mat-raised-button href="mailto:confusion@food.net"><i class="fa fa-envelope-o"></i> Email</a>
         </div>
       </div>
       <div fxFlex="40">
@@ -40,51 +40,51 @@
     <h3>Send us your Feedback</h3>
     <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
       <p>
-        <md-input-container class="half-width" dividerColor="{{(formErrors.firstname) ? 'warn' : 'primary'}}">
-          <input mdInput formControlName="firstname" placeholder="First Name" type="text" required>
-          <md-hint>
+        <mat-input-container class="half-width" dividerColor="{{(formErrors.firstname) ? 'warn' : 'primary'}}">
+          <input matInput formControlName="firstname" placeholder="First Name" type="text" required>
+          <mat-hint>
             <span [hidden]="!(formErrors.firstname)">{{ formErrors.firstname }}</span>
-          </md-hint>
-        </md-input-container>
-        <md-input-container class="half-width" dividerColor="{{(formErrors.lastname) ? 'warn' : 'primary'}}">
-          <input mdInput formControlName="lastname" placeholder="Last Name" type="text" required>
-          <md-hint>
+          </mat-hint>
+        </mat-input-container>
+        <mat-input-container class="half-width" dividerColor="{{(formErrors.lastname) ? 'warn' : 'primary'}}">
+          <input matInput formControlName="lastname" placeholder="Last Name" type="text" required>
+          <mat-hint>
             <span [hidden]="!(formErrors.lastname)">{{ formErrors.lastname }}</span>
-          </md-hint>
-        </md-input-container>
+          </mat-hint>
+        </mat-input-container>
       </p>
       <p>
-        <md-input-container class="half-width" dividerColor="{{(formErrors.telnum) ? 'warn' : 'primary'}}">
-          <input mdInput formControlName="telnum" placeholder="Tel No." type="tel" pattern="[0-9]*" required>
-          <md-hint>
+        <mat-input-container class="half-width" dividerColor="{{(formErrors.telnum) ? 'warn' : 'primary'}}">
+          <input matInput formControlName="telnum" placeholder="Tel No." type="tel" pattern="[0-9]*" required>
+          <mat-hint>
             <span [hidden]="!(formErrors.telnum)">{{ formErrors.telnum }}</span>
-          </md-hint>
-        </md-input-container>
-        <md-input-container class="half-width" dividerColor="{{(formErrors.email) ? 'warn' : 'primary'}}">
-          <input mdInput formControlName="email" placeholder="Email" type="email" email required>
-          <md-hint>
+          </mat-hint>
+        </mat-input-container>
+        <mat-input-container class="half-width" dividerColor="{{(formErrors.email) ? 'warn' : 'primary'}}">
+          <input matInput formControlName="email" placeholder="Email" type="email" email required>
+          <mat-hint>
             <span [hidden]="!(formErrors.email)">{{ formErrors.email }}</span>
-          </md-hint>
-        </md-input-container>
+          </mat-hint>
+        </mat-input-container>
       </p>
       <table class="form-size">
         <td>
-          <md-slide-toggle formControlName="agree">May we contact you</md-slide-toggle>
+          <mat-slide-toggle formControlName="agree">May we contact you</mat-slide-toggle>
         </td>
         <td>
-          <md-select placeholder="How?" formControlName="contacttype">
-            <md-option *ngFor="let ctype of contactType" [value]="ctype">
+          <mat-select placeholder="How?" formControlName="contacttype">
+            <mat-option *ngFor="let ctype of contactType" [value]="ctype">
               {{ ctype }}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
         </td>
       </table>
       <p>
-        <md-input-container class="full-width">
-          <textarea mdInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
-        </md-input-container>
+        <mat-input-container class="full-width">
+          <textarea matInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
+        </mat-input-container>
       </p>
-      <button type="submit" md-button class="background-primary text-floral-white" [disabled]="feedbackForm.invalid">Submit</button>
+      <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="feedbackForm.invalid">Submit</button>
     </form>
   </div>
 </div>

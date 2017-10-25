@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MdButtonModule, MdCheckboxModule, MdToolbarModule, MdListModule, MdLineModule, MdGridListModule,
-  MdCardModule, MdDialogModule, MdInputModule, MdSlideToggleModule, MdOptionModule, MdSelectModule,
-  MdProgressSpinnerModule, MdSliderModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatListModule, MatLineModule, MatGridListModule,
+  MatCardModule, MatDialogModule, MatInputModule, MatSlideToggleModule, MatOptionModule, MatSelectModule,
+  MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import 'hammerjs';
@@ -26,6 +26,10 @@ import { LeaderService } from './services/leader.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
+import { baseURL } from './shared/baseurl';
+
+import { ProcessHttpmsgService } from './services/process-httpmsg.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,25 +47,25 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
-    MdButtonModule,
-    MdInputModule,
-    MdSelectModule,
-    MdOptionModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule,
+    MatOptionModule,
     ReactiveFormsModule,
-    MdSliderModule,
-    MdSlideToggleModule,
-    MdProgressSpinnerModule,
-    MdListModule,
-    MdCheckboxModule,
-    MdGridListModule,
-    MdLineModule,
-    MdCardModule,
-    MdDialogModule,
-    MdToolbarModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatProgressSpinnerModule,
+    MatListModule,
+    MatCheckboxModule,
+    MatGridListModule,
+    MatLineModule,
+    MatCardModule,
+    MatDialogModule,
+    MatToolbarModule,
     FlexLayoutModule,
     AppRoutingModule
   ],
-  providers: [ DishService, PromotionService, LeaderService ],
+  providers: [ DishService, PromotionService, LeaderService, {provide: 'BASEURL', useValue: baseURL}, ProcessHttpmsgService ],
   entryComponents: [
     LoginComponent
   ],

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { Dish } from '../shared/dish';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
@@ -44,7 +44,8 @@ export class DishdetailComponent implements OnInit {
     private dishService: DishService,
     private route: ActivatedRoute,
     private location: Location,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    @Inject('BASEURL') private BASEURL
   ) {
     this.createForm();
   }
@@ -86,7 +87,11 @@ export class DishdetailComponent implements OnInit {
     };
     console.log(this.comment);
     this.dish.comments.push(this.comment);
-    this.commentForm.reset();
+    this.commentForm.reset({
+      name: '',
+      rating: 5,
+      comment: ''
+    });
   }
 
   ngOnInit() {
