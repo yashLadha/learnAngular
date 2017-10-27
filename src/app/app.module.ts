@@ -29,6 +29,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { baseURL } from './shared/baseurl';
 
 import { ProcessHttpmsgService } from './services/process-httpmsg.service';
+import { RestangularModule, Restangular } from 'ngx-restangular';
+import { RestangularConfigFactory } from './shared/restconfig';
 
 @NgModule({
   declarations: [
@@ -63,7 +65,8 @@ import { ProcessHttpmsgService } from './services/process-httpmsg.service';
     MatDialogModule,
     MatToolbarModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RestangularModule.forRoot(RestangularConfigFactory)
   ],
   providers: [ DishService, PromotionService, LeaderService, {provide: 'BASEURL', useValue: baseURL}, ProcessHttpmsgService ],
   entryComponents: [
