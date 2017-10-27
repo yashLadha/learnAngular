@@ -5,7 +5,7 @@
      fxLayoutAlign.gt-mat="space-around center"
      fxLayoutGap="10px">
 
-  <mat-card *ngIf="dish" fxFlex>
+  <mat-card *ngIf="dish" [@expand] fxFlex>
     <mat-card-header>
       <div mat-card-avatar></div>
       <mat-card-title>
@@ -28,7 +28,7 @@
   </div>
 
 
-  <mat-card *ngIf="promotion" fxFlex>
+  <mat-card *ngIf="promotion" [@expand] fxFlex>
     <mat-card-header>
       <div mat-card-avatar></div>
       <mat-card-title>
@@ -51,7 +51,7 @@
   </div>
 
 
-  <mat-card *ngIf="leader" fxFlex>
+  <mat-card *ngIf="leader" [@expand] fxFlex>
     <mat-card-header>
       <div mat-card-avatar></div>
       <mat-card-title>
