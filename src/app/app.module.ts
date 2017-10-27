@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
+import { FeedbackFormServiceService } from './services/feedback-form-service.service'
 import { LeaderService } from './services/leader.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
@@ -70,7 +71,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     AppRoutingModule,
     RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [ DishService, PromotionService, LeaderService, {provide: 'BASEURL', useValue: baseURL}, ProcessHttpmsgService ],
+  providers: [ DishService, FeedbackFormServiceService, PromotionService,
+    LeaderService, {provide: 'BASEURL', useValue: baseURL}, ProcessHttpmsgService ],
   entryComponents: [
     LoginComponent
   ],

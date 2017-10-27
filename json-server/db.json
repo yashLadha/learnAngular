@@ -223,5 +223,96 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "firstname": "yash",
+      "lastname": "Ladha",
+      "telnum": "56",
+      "email": "56@56.c",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "Great!",
+      "id": 1
+    },
+    {
+      "firstname": "Yes",
+      "lastname": "No",
+      "telnum": "44",
+      "email": "a@a.c",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "Great",
+      "id": 2
+    },
+    {
+      "firstname": "aa",
+      "lastname": "aa",
+      "telnum": "7",
+      "email": "a@a.c",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "",
+      "id": 3
+    },
+    {
+      "firstname": "Yash",
+      "lastname": "Ladha",
+      "telnum": "98",
+      "email": "y@y.c",
+      "agree": true,
+      "contacttype": "Email",
+      "message": "Great!",
+      "id": 4
+    },
+    {
+      "firstname": "Yash",
+      "lastname": "Ladha",
+      "telnum": "8",
+      "email": "y@y.c",
+      "agree": true,
+      "contacttype": "None",
+      "message": "",
+      "id": 5
+    },
+    {
+      "firstname": "aa",
+      "lastname": "aa",
+      "telnum": "1",
+      "email": "a@a.a",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 6
+    },
+    {
+      "firstname": "Yash",
+      "lastname": "Ladha",
+      "telnum": "4",
+      "email": "y@y.c",
+      "agree": true,
+      "contacttype": "Email",
+      "message": "HI",
+      "id": 7
+    },
+    {
+      "firstname": "Yash",
+      "lastname": "Ladha",
+      "telnum": "78",
+      "email": "yash@yash.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "Hi",
+      "id": 8
+    },
+    {
+      "firstname": "yash",
+      "lastname": "lad",
+      "telnum": "4",
+      "email": "yas2@y.c",
+      "agree": true,
+      "contacttype": "None",
+      "message": "",
+      "id": 9
+    }
+  ]
 }

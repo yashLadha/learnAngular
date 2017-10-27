@@ -36,8 +36,8 @@
     </div>
   </div>
 
-  <div fxFlex fxFlexOffset="20px" class="form-size">
-    <h3>Send us your Feedback</h3>
+  <h3>Send us your Feedback</h3>  
+  <div fxFlex fxFlexOffset="20px" class="form-size" *ngIf="feedbackFlag" [@expand]>
     <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
       <p>
         <mat-input-container class="half-width" dividerColor="{{(formErrors.firstname) ? 'warn' : 'primary'}}">
@@ -86,5 +86,21 @@
       </p>
       <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="feedbackForm.invalid">Submit</button>
     </form>
+  </div>
+
+  <div *ngIf="feedbackCopy" [@expand]>
+    <h4>Submitting Form</h4>
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <div *ngIf="preview" [@expand]>
+    <h4>Your Submission</h4>
+    <p mat-line>First Name: {{ preview.firstname }}</p>
+    <p mat-line>Last Name: {{ preview.lastname }}</p>
+    <p mat-line>Tel. Number: {{ preview.telnum }}</p>
+    <p mat-line>Email : {{ preview.email }}</p>
+    <p mat-line>Contact You?: {{ preview.agree }}</p>
+    <p mat-line>How?: {{ preview.contacttype }}</p>
+    <p mat-line>Feedback: {{ preview.message }}</p>
   </div>
 </div>
